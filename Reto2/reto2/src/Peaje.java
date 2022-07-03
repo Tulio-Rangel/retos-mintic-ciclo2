@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Peaje {
     //Atributos
     private String[] filaCoches;
@@ -12,7 +10,7 @@ public class Peaje {
     public Peaje(String[] filaCoches) {
         this.filaCoches = filaCoches;
         this.cochesFlyPass = new String[filaCoches.length];
-        for (int i = 0; i < filaCoches.length; i++) {
+        for (int i = 0; i <= filaCoches.length-1; i++) {
             this.cochesFlyPass[i] = " ";
         }
     }
@@ -39,9 +37,9 @@ public class Peaje {
 
     public void cambiarEstadoPeaje() {
         if (estadoPeaje) {
-            estadoPeaje = false;
+            setEstadoPeaje(false);
         } else {
-            estadoPeaje = true;
+            setEstadoPeaje(true);
         }
     }
 
