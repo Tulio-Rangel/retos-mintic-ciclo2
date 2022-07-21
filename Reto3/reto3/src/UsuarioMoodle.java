@@ -5,6 +5,7 @@ public class UsuarioMoodle {
     private String correo;
     private String descripcion;
 
+    //Constructor
     public UsuarioMoodle(String nombreCompleto, String documentoIdentidad, String password, String correo, String descripcion) {
         this.nombreCompleto = nombreCompleto;
         this.documentoIdentidad = documentoIdentidad;
@@ -13,14 +14,14 @@ public class UsuarioMoodle {
         this.descripcion = descripcion;
     }
 
-    public void editarPerfil(String nombreCompleto, String documentoIdentidad, String password, String correo, String descripcion {
-        this.nombreCompleto = setNombreCompleto();
-        this.documentoIdentidad = setDocumentoIdentidad();
-        this.password = setPassword();
-        this.correo = setCorreo();
-        this.descripcion = setDescripcion();
+    //Métodos
+    public void editarPerfil(String nombreCompleto, String documentoIdentidad, String password, String correo, String descripcion) {
+        this.nombreCompleto = nombreCompleto;
+        this.documentoIdentidad = documentoIdentidad;
+        this.password = password;
+        this.correo = correo;
+        this.descripcion = descripcion;
     }
-
 
     //Getters and Setters
     public String getNombreCompleto() {

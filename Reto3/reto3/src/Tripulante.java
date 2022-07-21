@@ -2,16 +2,23 @@ public class Tripulante extends UsuarioMoodle{
     private double[] calificaciones;
     private boolean[] entregas;
 
-    public void Tripulante(String nombreCompleto, String documentoIdentidad, String password, String correo, String descripcion, double[] calificaciones, boolean[] entregas) {
+
+    //Constructor
+    public void Tripulante(String nombreCompleto, String documentoIdentidad, String password, String correo, String descripcion, double[] calificaciones, boolean[] entregas, int n) {
         super(nombreCompleto, documentoIdentidad, password, correo, descripcion);
-        this.calificaciones = calificaciones;
-        this.entregas = entregas;
+        this.calificaciones = new double[n];
+        this.entregas = new boolean[n];
     }
 
-    public void resolverReto(int reto) {
-        //
+    //Métodos
+    public void resolverReto(int retoAEntregar) {
+        for (int i = 0; i < calificaciones.length; i++) {
+            if(retoAEntregar == i) {
+                entregas[i] = true;
+            }
+            calificaciones[i] = 0;
+        }
     }
-
 
     //Getters and Setters
     public double[] getCalificaciones() {
